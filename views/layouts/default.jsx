@@ -1,6 +1,6 @@
 // Boilerplate HTML default for views pages
 
-// Imports/requires & selectors
+// Imports
 const React = require('react');
 
 // Stub function

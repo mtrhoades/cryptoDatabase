@@ -60,3 +60,11 @@ a {
     text-decoration: none;
     color: darkgreen;
 }
+
+#coinImages {
+    width: 15%;
+}
+
+#error404Cat {
+    width: 25%;
+}

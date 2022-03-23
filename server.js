@@ -31,6 +31,12 @@ const coinsController = require('./controllers/coin_controller.js');
 app.use('/coins', coinsController);
 
 
+// ERROR 404 ROUTE
+app.get('*', (req, res) => {
+    res.send('404')
+});
+
+
 // SERVER LISTEN
 app.listen(PORT, () => {
     console.log('Server is wide awake on port = ' + PORT) // starts server from port in the .env file.

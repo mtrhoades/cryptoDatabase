@@ -15,8 +15,15 @@ coins.get('/', (req, res) => {
 
 // SHOW ROUTE (Read Route)
 coins.get('/:arrayIndex', (req, res) => {
-    res.send(db[req.params.arrayIndex])
-})
+    // res.send(db[req.params.arrayIndex]) // was done first to list data before we made a show page
+    if (db[req.params.arrayIndex]) {
+        res.render('show', {
+            coins: db[req.params.arrayIndex]
+        })
+    } else {
+        res.render('error404')
+    }
+});
 
 
 
