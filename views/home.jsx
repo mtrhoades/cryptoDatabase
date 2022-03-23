@@ -2,7 +2,7 @@
 
 // Imports/require & selectors
 const React = require('react');
-const Def = require('./default');
+const Def = require('./layouts/default');
 
 function home() {
     return (

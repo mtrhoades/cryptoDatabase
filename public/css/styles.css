@@ -46,3 +46,17 @@ nav a:hover {
     background-color: white;
     border-radius: 50px;
 }
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+}

@@ -4,7 +4,7 @@
 const React = require('react');
 
 // Stub function
-function Def(html) {
+function Def(html) { // must put html in as the parameter to use {html.children}
     return (
         <html>
             <head>

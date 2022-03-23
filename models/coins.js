@@ -8,9 +8,6 @@ require('dotenv').config();
 //     useUnifiedTopology: true
 // });
 
-
-
-
 module.exports = [
     {
         name: "Bitcoin",
