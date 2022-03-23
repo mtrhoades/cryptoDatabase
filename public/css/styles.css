@@ -1,0 +1,13 @@
+body {
+    padding: 1em;
+    background-color: aqua;
+}
+
+#homeImage {
+    width: 100%;
+}
+
+div {
+    width: 500px;
+    height: 500px;
+}
