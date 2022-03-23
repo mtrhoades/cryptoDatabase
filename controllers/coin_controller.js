@@ -1,16 +1,21 @@
-// CONTROLLER:
+// DEPENDENCIES
+const express = require('express');
+const coins = express.Router();
+const db = require('../models/coins.js')
 
-// Imports/require & selectors
-const router = require('express').Router();
-const coins = require('../models/coins.js');
 
-// Coin Index Route
-router.get('/', (req, res) => {
-    res.render('/coins/index');
+// INDEX PAGE ROUTE 
+coins.get('/', (req, res) => {
+    res.send(db);
 });
 
 
+// SHOW ROUTE (Read Route)
+coins.get('/:arrayIndex', (req, res) => {
+    res.send(db[req.params.arrayIndex])
+})
 
 
-// Exports
-module.exports = router;
+
+// EXPORTS
+module.exports = coins;

@@ -1,13 +1,48 @@
 body {
+    margin: 5em;
     padding: 1em;
     background-color: aqua;
 }
 
-#homeImage {
-    width: 100%;
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 1em;
 }
 
-div {
-    width: 500px;
-    height: 500px;
+#homeBanner {
+    color: rgb(231, 112, 15);
+    text-align: center;
+    padding: 1em;
+}
+#homeImage {
+    width: 75%;
+}
+
+#bannerImg {
+    padding: 1em;
+}    
+
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    display: inline;
+    padding: 3em;
+    font-size: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+nav a:hover {
+    background-color: white;
+    border-radius: 50px;
 }

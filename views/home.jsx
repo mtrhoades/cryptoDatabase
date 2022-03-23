@@ -8,14 +8,11 @@ function home() {
     return (
         <Def>
             <main>
-                <h1>Cryptocurrency Database</h1>
-                <div>
-                    <img id="homeImage" src="/images/cryptobullsvsbears.png" alt="sillouhette of bulls vs. bears"></img>
+                <div id="homeBanner">
+                    <h1>Cryptocurrency Database</h1>
                 </div>
-                <div>
-                    <a href="/coins">
-                        <button className="btn-primary">Coins Page</button>
-                    </a>
+                <div id="bannerImg">
+                        <img id="homeImage" src="/images/bullvsbear.png" alt="sillouhette of bulls vs. bears"></img>
                 </div>
             </main>
         </Def>

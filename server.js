@@ -1,30 +1,37 @@
-// Imports/requires & selectors
-const express = require('express');
-const methodOverride = require('method-override');
+// DEPENDENCIES:
+const express = require('express'); // require express framework
+const methodOverride = require('method-override'); // Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+const mongoose = require('mongoose');
 
-const app = express();
 
-// Config.
-require('dotenv').config();
-const PORT = process.env.PORT
+// CONFIG. & VARIABLES
+require('dotenv').config(); // requires configuration for .env file.
+const PORT = process.env.PORT // variable for .env file for specified port #.
+const app = express(); // variable for the web application
+const MONGO_URI = process.env.MONGO_URI;
 
-// Middleware
+
+// MIDDLEWARE:
 app.set('views', __dirname + '/views'); // grabs the views folder files.
-app.set('view engine', 'jsx'); // sets view engine to JSX
-app.engine('jsx', require('express-react-views').createEngine()); // requires REACT
-app.use(express.static('public')); // access to public folder
+app.engine('jsx', require('express-react-views').createEngine()); // requires REACT for JSX
+app.set('view engine', 'jsx'); // sets view engine to JSX for view files
+app.use(express.static('public')); // access to public folder for css and images
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-// coin_controller
-app.use('/coins', require('./controllers/coin_controller'));
 
-// Home page
+// HOME PAGE ROUTE (initial route)
 app.get('/', function(req, res) {
-    res.render('home')
+    res.send('Welcome to my crypto database!')
 });
 
-// Server listen
+
+// CONTROLLER ROUTE (/coins)
+const coinsController = require('./controllers/coin_controller.js');
+app.use('/coins', coinsController);
+
+
+// SERVER LISTEN
 app.listen(PORT, () => {
-    console.log('Whats up my duuuuude?!')
+    console.log('Server is wide awake on port = ' + PORT) // starts server from port in the .env file.
 });

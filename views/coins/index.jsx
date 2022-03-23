@@ -8,7 +8,7 @@ const Def = require('../default');
 function index() {
     return (
         <Def>
-            
+
         </Def>
     )
 }
