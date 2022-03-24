@@ -4,7 +4,8 @@
 const React = require('react');
 const Def = require('./layouts/default');
 
-function Show ( { coins } ) {
+// Stub Function
+function Show ( { coins, index } ) {
     console.log(coins.name)
     return (
         <Def>
@@ -21,7 +22,10 @@ function Show ( { coins } ) {
                 1 billion
             </p>
             <img id="coinImages" src={coins.image} alt="{coins.name}" />
-            <li><a href="/coins">Go Home</a></li>
+            <form action={`/coins/${index}?_method=DELETE`} method="POST">
+                <input type="submit" value="DELETE"></input>
+            </form>
+            <li><a href="/coins">Go Back to Coins Page</a></li>
         </Def>
     )
 }

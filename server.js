@@ -33,7 +33,7 @@ app.use('/coins', coinsController);
 
 // ERROR 404 ROUTE
 app.get('*', (req, res) => {
-    res.send('404')
+    res.render('error404')
 });
 
 

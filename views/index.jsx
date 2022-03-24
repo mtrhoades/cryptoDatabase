@@ -5,7 +5,7 @@ const React = require('react');
 const Def = require('./layouts/default');
 
 // Stub function
-function index({ coins }) {
+function index( { coins } ) {
     return (
         <Def>
             <h2>Coin Index Page</h2>
@@ -13,11 +13,13 @@ function index({ coins }) {
             <ul>
                 {
                     coins.map((coins, index) => {
-                        return (<li key={index.name}>
+                        return (
+                        <li key={index}>
                             <a href="{`/coins/${index}`}">
                                 {coins.name}
                             </a>
-                        </li>)
+                        </li>
+                        )
                     })
                 }
             </ul>

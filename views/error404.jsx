@@ -9,7 +9,7 @@ function error404({ breads }) {
     return (
       <Default title={'title'}>
         <h2>404 Error</h2>
-        <a href={`/breads`}>Return to Breads Page</a>
+        <a href={`/coins`}>Return to Coins Page</a>
         <img id ="error404Cat" src="/images/404_not_found.png" alt="sleeping cat"></img>
       </Default>
     );
