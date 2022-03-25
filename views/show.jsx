@@ -23,6 +23,7 @@ function Show ( { coins, index } ) {
             </p>
             <img id="coinImages" src={coins.image} alt="{coins.name}" />
             <form action={`/coins/${index}?_method=DELETE`} method="POST">
+            <br></br>
                 <input type="submit" value="DELETE"></input>
             </form>
             <li><a href="/coins">Go Back to Coins Page</a></li>

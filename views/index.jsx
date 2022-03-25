@@ -15,7 +15,7 @@ function index( { coins } ) {
                     coins.map((coins, index) => {
                         return (
                         <li key={index}>
-                            <a href="{`/coins/${index}`}">
+                            <a href={`/coins/${index}`}>
                                 {coins.name}
                             </a>
                         </li>
