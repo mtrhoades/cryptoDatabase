@@ -4,6 +4,31 @@ const coins = express.Router();
 const db = require('../models/coins.js')
 
 
+// // fetch request (coingecko api)
+// coins.get('/', (req, res) => {
+// //     fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=1000&page=1&sparkline=false', {
+// //     method: 'GET',
+// //     headers: {
+// //         'Content-Type': 'application/json'
+// //     },
+// //     body: JSON.stringify (
+// //         {
+// //             name: 'User 1'
+// //         })
+        
+// // })
+// //     .then(res => {
+// //         res.ok ? console.log('SUCCESS!') : console.log("NOT SUCCESSFUL!")
+// //         return res.json()
+// //     })
+// //     .then(data => console.log(data))
+// //     .catch(error => console.log('ERROR 404 NOT FOUND!'));
+//     res.render('index');
+// });
+
+
+
+
 // INDEX PAGE ROUTE 
 coins.get('/', (req, res) => {
     res.render('index', {
@@ -11,6 +36,7 @@ coins.get('/', (req, res) => {
     });
     // res.send(db) // made first to show models/coins.js but than we made an actual index views page to render instead.
 });
+
 
 
 // New Coin Route (Read Route)

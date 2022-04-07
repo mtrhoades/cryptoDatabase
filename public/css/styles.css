@@ -1,30 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    margin: 5em;
-    padding: 1em;
     background-color: aqua;
 }
 
 main {
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
     padding: 1em;
 }
 
+#loginWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#loginForm {
+    padding: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#loginB {
+    width: 80px;
+    border-radius: 50px;
+   background-color: #edb742;
+}
+
+#loginB:hover {
+    background-image: linear-gradient(to right, #d69811, #e0a628, #f0ba46, #f5c96c, #f5d89a, #fae7be);
+}
+
+#signUpButton {
+    width: 80px;
+    border-radius: 50px;
+    background-color: #c44a08;     
+}
+
+#signUpButton:hover {
+    background-image: linear-gradient(to right, #e0570d, #e8631c, #f58042, #ed9668, #f7ad86, #fad3be);
+
+}
+
+input {
+    border-radius: 50px;
+}
+
+label {
+    padding: 0.5em;
+}
+
 #homeBanner {
-    color: rgb(231, 112, 15);
+    color: #edb742;
     text-align: center;
     padding: 1em;
 }
 #homeImage {
-    width: 75%;
+    width: 12.5vw;
 }
 
 #bannerImg {
     padding: 1em;
+    text-align: center;
 }    
 
+h1 {
+    font-size: 60px;
+    font-family: 'Sniglet', cursive;
+}
 
 nav {
     display: flex;
@@ -33,7 +91,7 @@ nav {
 
 nav li {
     display: inline;
-    padding: 3em;
+    padding: 3em;            
     font-size: 25px;
 }
 

@@ -26,4 +26,6 @@ function New () {
     )
 }
 
+
+// Exports
 module.exports = New;

@@ -9,10 +9,10 @@ function home() {
         <Def>
             <main>
                 <div id="homeBanner">
-                    <h1>Cryptocurrency Database</h1>
+                    <h1>Fool's Gold</h1>
                 </div>
                 <div id="bannerImg">
-                        <img id="homeImage" src="/images/bullvsbear.png" alt="sillouhette of bulls vs. bears"></img>
+                        <img id="homeImage" src="/images/uphillBattle.png" alt="sillouhette of bulls vs. bears"></img>
                 </div>
             </main>
         </Def>

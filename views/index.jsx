@@ -3,13 +3,14 @@
 // Imports
 const React = require('react');
 const Def = require('./layouts/default');
+const CoinGecko = require('coingecko-api');
+
 
 // Stub function
-function index( { coins } ) {
+function index( { coins, index } ) {
     return (
         <Def>
-            <h2>Coin Index Page</h2>
-            {/* <p>I have {coins[2].name}!</p> (checking for adding data)*/ } 
+            <h2>Portfolio Page</h2>
             <ul>
                 {
                     coins.map((coins, index) => {

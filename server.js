@@ -18,17 +18,21 @@ app.set('view engine', 'jsx'); // sets view engine to JSX for view files
 app.use(express.static('public')); // access to public folder for css and images
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
-
-
-// HOME PAGE ROUTE (initial route)
-app.get('/', function(req, res) {
-    res.send('Welcome to my crypto database!')
-});
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
+    () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
+);
 
 
 // CONTROLLER ROUTE (/coins)
 const coinsController = require('./controllers/coin_controller.js');
 app.use('/coins', coinsController);
+
+
+// Login Page Route
+app.get('/', (req, res) => {
+    res.render('login')
+});
+
 
 
 // ERROR 404 ROUTE
